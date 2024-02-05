@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Mundo - Contact Us</title>
@@ -143,7 +143,7 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
 
-                <button type="button" onclick="submitForm()">Submit</button>
+                <button type="submit">Submit</button>
             </form>
         </main>
 
@@ -157,6 +157,36 @@
             </div>
         </footer>
     </div>
-    <script src="script.js"></script>
+    <script>
+        function submitForm() {
+            // Get the form element
+            const form = document.getElementById("contactForm");
+
+            // Get the values from the form fields
+            const name = form.elements["name"].value;
+            const email = form.elements["email"].value;
+            const message = form.elements["message"].value;
+
+            // Perform validation
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields");
+                return;
+            }
+
+            // Create an object with the form data
+            const formData = {
+                name,
+                email,
+                message
+            };
+
+            // Send the form data to the server (replace this with your own logic)
+            // For demonstration purposes, we'll simply log the form data to the console
+            console.log(formData);
+
+            // Reset the form fields
+            form.reset();
+        }
+    </script>
 </body>
 </html>
