@@ -38,53 +38,5 @@
                 <button type="submit">Submit</button>
 
             </form>
-            
-        </main>
 
-        <footer class="footer">
-            <p class="footer-title">King Fahd-Mecca 24346-Saudi Arabia<br> &copy; 2024 <span>El Mundo</span> All rights reserved.</p>
-            <div class="social-icons">
-                <a id="mail" href="mailto:el-mundo@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><button id="mode" class="button"><i class="fa-solid fa-circle-half-stroke"></i></button></a>
-            </div>
-        </footer>
-    </div>
-    <div id="successMessage" style="display: none; color: green;"></div>
-    
-    <script>
-       function submitForm() {
-    // Get the form element
-    const form = document.getElementById("contactForm");
-
-    // Get the values from the form fields
-    const name = form.elements["name"].value;
-    const email = form.elements["email"].value;
-    const message = form.elements["message"].value;
-
-    // Perform validation
-    if (name === "" || email === "" || message === "") {
-        alert("Please fill in all fields");
-        return;
-    }
-
-    // Create an object with the form data
-    const formData = {
-        name,
-        email,
-        message
-    };
-
-    // Send the form data to the server (replace this with your own logic)
-    // For demonstration purposes, we'll simply log the form data to the console
-    console.log(formData);    
-
-    // Reset the form fields
-    form.reset();
-}
-
-    </script>
-    <script src="script.js"></script>
-</body>
 </html>
